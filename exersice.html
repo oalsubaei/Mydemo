@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enhanced Web Page with Game</title>
+    <link rel="stylesheet" type="text/css" href="exercise.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <h1>Welcome to My Enhanced Web Page</h1>
+        
+        <form id="nameForm">
+            <label for="name">Enter your name:</label>
+            <input type="text" id="name" name="name" required>
+            <button type="button" onclick="displayPersonalGreeting()">Submit</button>
+        </form>
+        <p id="personalGreeting"></p>
+        
+        <h2>Random Joke</h2>
+        <button onclick="fetchJoke()">Get a Joke</button>
+        <div class="card" id="jokeCard">
+            <p id="joke"></p>
+        </div>
+
+        <h2>Check the Weather</h2>
+        <form id="weatherForm">
+            <label for="city">Enter city name:</label>
+            <input type="text" id="city" name="city" required>
+            <button type="button" onclick="fetchWeather()">Get Weather</button>
+        </form>
+        <div class="card" id="weather">
+            <p id="weatherInfo"></p>
+            <img id="weatherIcon" src="" alt="Weather Icon" style="display: none;">
+        </div>
+        
+        <h2>Jumping Dinosaur Game</h2>
+        <p>Press the spacebar to make the dinosaur jump over the obstacles!</p>
+        <div class="game-container">
+            <div class="dino" id="dino"></div>
+            <div class="obstacle" id="obstacle"></div>
+            <div class="score-board">
+                <h2>Score: <span id="score">0</span></h2>
+            </div>
+        </div>
+        <button onclick="startGame()">Start Game</button>
+    </div>
+    
+    <!-- Link to the JavaScript file -->
+    <script src="exercise.js"></script>
+</body>
+</html>
